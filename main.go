@@ -97,7 +97,8 @@ func main() {
 
 	// Run the built binary
 	binaryPath := filepath.Join(tempDir, cmd)
-	runCmd := exec.Command(binaryPath, os.Args[1:]...)
+
+	runCmd := exec.Command(binaryPath, os.Args[2:]...)
 	runCmd.Stdout = os.Stdout
 	runCmd.Stderr = os.Stderr
 	if err := runCmd.Run(); err != nil {

@@ -53,6 +53,8 @@ func main() {
 			repo = "https://" + strings.Join(repoParts[0:3], "/") + ".git"
 			subDir = strings.Join(repoParts[3:], "/")
 		}
+	} else {
+		repo = "https://" + repo + ".git"
 	}
 
 	var stdoutBuf, stderrBuf bytes.Buffer
